@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Style */
+@layer base {
+    .section-padding {
+        @apply py-[4rem] px-[6rem];
+    } 
+
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+
+    .app-bg {
+        @apply bg-[]
+    }
+}
