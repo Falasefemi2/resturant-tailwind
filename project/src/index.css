@@ -1,18 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+
+@layer base {
+  :root {
+    --font-base: "Cormorant Upright", serif;
+    --font-alt: "Open Sans", sans-serif;
+
+    --color-golden: #dcca87;
+    --color-black: #0c0c0c;
+    --color-gray: #545454;
+    --color-crimson: #f5efdb;
+    --color-grey: #aaaaaa;
+    --color-white: #ffffff;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.slide-bottom {
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
 /* Custom Style */
 @layer base {
-    .section-padding {
-        @apply py-[4rem] px-[6rem];
-    } 
+  .section-padding {
+    @apply py-[4rem] px-[6rem] xl:p-[4rem] lg:py-[4rem] lg:px-[2rem]
+  }
 
-    .flex-center {
-        @apply flex justify-center items-center;
-    }
+  .flex-center {
+    @apply flex justify-center items-center
+  }
 
-    .app-bg {
-        @apply bg-[]
-    }
+  .app-bg {
+    @apply bg-[url(assets/bg.png)] bg-center bg-cover bg-repeat bg-fixed
+  }
+
+  .app-wrapper {
+    @apply flex justify-between items-center min-h-screen 2xl:flex-col
+  }
+
+  .app-wrapper-info {
+    @apply flex-1 w-full flex justify-center items-start flex-col
+  }
+
+  .app-wrapper-img {
+    @apply flex-1 w-full flex justify-center items-center ml-[2rem] 2xl:mt-[5rem] 2xl:mr-0 2xl:mb-0 2xl:ml-0
+  }
+
+  .app-wrapper-img-reverse {
+    @apply justify-start mr-[2rem] 2xl:mt-0 2xl:mr-0 2xl:mb-[5rem] 2xl:ml-0
+  }
+
+  .app-wrapper-img img {
+    @apply w-[80%] 2xl:w-full
+  }
+
+  .custom-button {
+    @apply font-bold leading-[28px] tracking-[0.04em] text-[14px] py-[0.5rem] px-[1.5rem] rounded-[1px]  border-none outline-none cursor-pointer bg-[color:var(--color-crimson )] text-[var(--color-black)] font-['var(--font-base)'] 3xl:text-[37px]  3xl:leading-[37px]
+  }
+  
+  .p-cormorant {
+    @apply font-['var(--font-base)'] text-[var(--color-white)] font-bold tracking-[0.04em] capitalize tabular-nums lining-nums leading-[29.9px] text-[23px] 3xl:text-[37px]  3xl:leading-[37px] lg:text-[21px] md:text-[19px]
+  }
+  
+  .p-opensans {
+    @apply font-['var(--font-alt)'] text-[var(--color-white)] font-normal tracking-[0.04em] capitalize leading-[28px] text-[24px] 3xl:text-[30px] 3xl:leading-[50px] lg:text-[14px] md:text-[12px]
+  }
+
+  .headtext-cormorant {
+    @apply font-['var(--font-base)'] text-[var(--color-golden)] text-[64px] lg:text-[150px] lg:leading-[210px] leading-[83.2px] tracking-[0.04em] capitalize 3xl:text-[150px] 3xl:leading-[310px] md:text-[45px] md:leading-[70px]
+  }
+
+  .spoon-img {
+    @apply w-[45px] 3xl:w-20
+  }
+
 }
+
+
+
+
+
+
+
+
