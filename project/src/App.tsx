@@ -1,8 +1,23 @@
-export default function App() {
+import { Navbar } from "./component"
+import { AboutUs, Chef, FindUs, Footer, Gallery, Header, Intro, Laurels, SpecialMenu } from "./container"
+
+
+const App = () => {
   return (
-    <h1 className="headtext-cormorant">
-      Hello world!
-    </h1>
+    <div>
+      <Navbar />
+      <Header />
+      <AboutUs />
+      <SpecialMenu />
+      <Chef />
+      <Intro />
+      <Laurels />
+      <Gallery />
+      <FindUs />
+      <Footer />
+    </div>
   )
 }
+
+export default App
 
